@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { MovieContext } from "../context/GlobalState";
 
 function MovieCard({ movieItem }) {
-  const { handleAddMovieToWatchList, handleAddMovieToWatched, state } =
-    useContext(MovieContext);
+  const { handleAddMovieToWatchList, handleAddMovieToWatched, state } = useContext(MovieContext);
 
   return (
     <div className="movie-card">

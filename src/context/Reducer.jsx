@@ -3,6 +3,11 @@ import {ADD_MOVIE_TO_WATCHED, ADD_MOVIE_TO_WATCHLIST, MOVE_TO_WATCHED, REMOVE_MO
 export default function Reducer(state,action){
     switch(action.type){
         case ADD_MOVIE_TO_WATCHLIST: 
+
+            if (state.watchlist.find(movie => movie.imdbID === action.payload.imdbID)) {
+                return state;  // ✅ Prevent duplicate entries
+            }
+
             console.log(action);
             return {
                 ...state,
@@ -10,6 +15,11 @@ export default function Reducer(state,action){
             }
 
         case ADD_MOVIE_TO_WATCHED:
+
+            if (state.watched.find(movie => movie.imdbID === action.payload.imdbID)) {
+                return state;  // ✅ Prevent duplicate entries
+            }
+
             return {
                 ...state,
                 watched: [action.payload, ...state.watched]

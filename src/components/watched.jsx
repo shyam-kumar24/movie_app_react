@@ -11,7 +11,7 @@ function MovieAlreadyWatched(){
             <h1>Movie watched</h1>
             <div className="watched-wrapper">
                 {state.watched && state.watched.length > 0 ? (
-                state.watchlist.map((movieItem) => (
+                state.watched.map((movieItem) => (
                     
                     <div className="movie-card" key={movieItem.imdbID}>
                         <div className="img">

@@ -18,7 +18,8 @@ const GlobalState = ({ children }) => {
   const [searchMovieParam, setSearchMovieParam] = useState("");
   const [loading, setLoading] = useState(false);
   const [movieSearchResult, setMovieSearchResult] = useState([]);
-
+  
+  // reducer used .
   const [state, dispatch] = useReducer(Reducer, initialState);
 
   async function fetchListOfMovies() {

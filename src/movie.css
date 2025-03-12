@@ -29,7 +29,7 @@
 .movie-app .watch-list-details-container {
   display: flex;
   justify-content: space-between;
-  gap: 800px;
+  gap: 100px;
 }
 
 
